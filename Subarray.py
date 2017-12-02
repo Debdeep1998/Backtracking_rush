@@ -1,6 +1,6 @@
-n=int(input())
+n=int(input())//Enter size of array
 l=[]
-for i in range(n):
+for i in range(n)://Enter array elements
     a=int(input())
     l.append(a)
 k=[0]*n
