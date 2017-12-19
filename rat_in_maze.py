@@ -16,15 +16,16 @@ def path(i,j):
         print(b[i])
     f=1
     return
-  elif(i<=n-1):
-    while(j<n and f!=1):
-      b[i][j]=1
-      if(i<n-1):
-        path(i+1,j)
-        
-      if(f!=1):
-        j+=1
-        path(i,j)
-        j-=1
+  elif(i<=n-1 and f!=1):
+    b[i][j]=1
+    if(i!=n-1):
+      path(i+1,j)
+    while(j<n-1 and f!=1):
+      path(i,j+1)
+      if(a[i][j+1]==0):
+        break
+      j+=1
+    b[i][j]=0
 path(0,0)    
+  
   
